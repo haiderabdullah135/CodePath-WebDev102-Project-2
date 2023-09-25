@@ -1,0 +1,19 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1.title {
+  color: #05daff;
+  text-align: center;
+  font-size: 65px;
+  font-family: 'Digital-7', sans-serif;
+}
+
+.description {
+  color: #04e2ff; 
+  text-align: center;
+  font-size: 36px;
+  font-family: 'Digital-7', sans-serif;
+  margin-bottom: 450px;
+}

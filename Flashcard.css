@@ -1,0 +1,59 @@
+/* Flashcard.css */
+.flashcard-container {
+  display: flex;
+  flex-direction: column; /* Stack card and button vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 10vh; /* Ensure the container takes the full viewport height */
+  margin-bottom: 200px;
+}
+
+.flashcard {
+  width: 350px;
+  height: 250px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a box shadow for a smoother appearance */
+}
+
+.flashcard-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  
+}
+
+.flashcard-front {
+  background-color: #191770;
+  color: white;
+  position: absolute;
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.flashcard-back {
+  background-color: #C20521;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
